@@ -88,7 +88,7 @@ header {
     justify-content: space-between;
     align-items: center;
   }
-  header img {
+  header img, .menu img {
     max-height: 40px;
     height: auto;
   }
@@ -234,13 +234,16 @@ footer {
   padding: 18px 36px;
 }
 
-.menu{
+.mobile, menu, .btn-menu{
   display: none;
 }
 
 /* Mobile Adjusments*/
 
 @media only screen and (max-width: 767px) {
+  body{
+    padding: 16px;
+  }
   h1 {
     font-size: 32px;
   }
@@ -250,8 +253,20 @@ footer {
   header ul{
     display: none;
   }
-  .hero h1, .hero p{
+ .hero p{
     display: none;
+  }
+  .hero{
+    background: url(assets/img/people.png) center bottom / auto 88% no-repeat, linear-gradient(126.7deg, #F6F6FE 0%, #E6E8FF 49.34%, #D6DAF7 98.69%);
+    padding: 0;
+  }
+  .hero h1{
+    padding: 40px;
+    width: 100%;
+    color: #fff;
+    background-color: #242f52a3;
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 24px 24px;
   }
   .about .wrap{
     display: flex;
@@ -292,42 +307,47 @@ footer {
     flex-direction: column;
     gap: 24px;
   }
+  footer p{
+    text-align: center;
+  }
+
+  .mobile{
+    display: block;
+  }
   .menu{
-    display: block;
-  }
-
- #openMenuBtn {
-    color: #242F52;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  #menuOverlay {
+    z-index: 1;
+    display: none;
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.9);
-    display: none;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #242f52;
+  }
+  .menu img{
+    margin: 16px;
+  }
+  .menu ul{
+    display: flex;
+    height: 80vh;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 24px;
-    z-index: 2000;
   }
-
-  #menuOverlay a, #menuOverlay button {
+  .menu li a{
+    font-size: 32px;
     color: #fff;
-    font-size: 24px;
-    text-decoration: none;
-    background: none;
-    border: none;
-    cursor: pointer;
+  }
+  .btn-menu{
     display: block;
+    font-size: 20px;
+    padding: 8px 20px;
   }
-
-  #closeMenuBtn{
-    display: none;
-    z-index: 99999;
+  .menu .close{
+    position: fixed;
+    right: 16px;
+    top: 16px;
+    color: #fff;
   }
-
 }
