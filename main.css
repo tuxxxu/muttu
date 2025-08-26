@@ -269,6 +269,7 @@ footer {
     background-color: #242f52a3;
     backdrop-filter: blur(10px);
     border-radius: 0 0 24px 24px;
+    text-align: center;
   }
   .about .wrap{
     display: flex;
