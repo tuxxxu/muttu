@@ -110,7 +110,7 @@ header {
 
   .hero{
     background:
-    url("assets/img/people.png") right bottom / auto 88% no-repeat,
+    url("img/people.png") right bottom / auto 88% no-repeat,
     linear-gradient(126.7deg, #F6F6FE 0%, #E6E8FF 49.34%, #D6DAF7 98.69%);
     border-radius: 24px;
     display: flex;
@@ -257,7 +257,7 @@ footer {
     display: none;
   }
   .hero{
-    background: url(assets/img/people.png) center bottom / auto 88% no-repeat, linear-gradient(126.7deg, #F6F6FE 0%, #E6E8FF 49.34%, #D6DAF7 98.69%);
+    background: url(img/people.png) center bottom / auto 88% no-repeat, linear-gradient(126.7deg, #F6F6FE 0%, #E6E8FF 49.34%, #D6DAF7 98.69%);
     padding: 0;
     height: 50dvh;
   }
