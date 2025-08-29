@@ -180,9 +180,10 @@ header {
 
 .topic{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     width: 100%;
+    text-align: center;
 }
 .topic h2{
     font-weight: 600;
@@ -194,7 +195,6 @@ header {
 }
 .topic img{
     width: 48px;
-    margin-left: 40px;
 }
 
 /* Footer */
@@ -316,6 +316,7 @@ footer {
   }
   footer{
     flex-direction: column;
+    padding: 40px 16px;
     gap: 24px;
   }
   footer p{
