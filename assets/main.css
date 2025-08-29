@@ -194,6 +194,7 @@ header {
 }
 .topic img{
     width: 48px;
+    margin-left: 40px;
 }
 
 /* Footer */
@@ -205,10 +206,14 @@ footer {
     background: linear-gradient(126.7deg, #F6F6FE 0%, #E6E8FF 49.34%, #D6DAF7 98.69%);
     border-radius: 24px;
     padding: 40px;
+    margin-bottom: 112px;
   }
   footer img {
     max-height: 40px;
     height: auto;
+  }
+  footer p {
+    font-weight: 500;
   }
 
   /* Button CTA */
@@ -223,7 +228,7 @@ footer {
   font-weight: 500;
   transition: .5s;
   color: #fff !important;
-
+  text-align: center;
   z-index: 9999;
   transform: translateZ(0); /* força renderização GPU */
   -webkit-transform: translateZ(0);
@@ -295,6 +300,9 @@ footer {
     width: 100%;
     text-align: center;
   }
+  .topic img{
+    margin-left: 0;
+}
   .features .wrap{
     display: flex;
     justify-content: flex-end;
@@ -349,8 +357,14 @@ footer {
   }
   .menu .close{
     position: fixed;
-    right: 16px;
-    top: 16px;
+    right: 0;
+    top: 0;
     color: #fff;
+  }
+
+
+  /* Toggle class to force red background when at bottom */
+  .at-bottom{ 
+      width: calc(100% - 80px);
   }
 }

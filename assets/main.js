@@ -33,3 +33,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+(function() {
+  var faleBtn = document.querySelector('a.button');
+  var footer = document.querySelector('footer');
+
+  function toggleRedOnBottom() {
+    if (!faleBtn) return;
+    var isBottom = (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 100);
+
+    if (isBottom) {
+      faleBtn.classList.add('at-bottom');
+    } else {
+      faleBtn.classList.remove('at-bottom');
+    }
+  }
+
+  window.addEventListener('scroll', toggleRedOnBottom, { passive: true });
+  window.addEventListener('resize', toggleRedOnBottom);
+  document.addEventListener('DOMContentLoaded', toggleRedOnBottom);
+  toggleRedOnBottom();
+})();
